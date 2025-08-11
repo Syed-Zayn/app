@@ -2,8 +2,8 @@ import streamlit as st
 import os
 from io import BytesIO
 from PIL import Image
-from google import genai
-from google.genai import types
+import google.generativeai as genai
+from google.generativeai import types
 
 st.set_page_config(page_title="🎃 AI Horror Image Generator", layout="wide")
 st.title("🎃 AI Horror Image Generator")
@@ -80,3 +80,4 @@ if st.button("Generate Images"):
 
         status_text.text("🎉 All horror images generated successfully!")
         progress_bar.empty()
+
