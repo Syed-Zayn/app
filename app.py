@@ -3,7 +3,8 @@ import os
 from io import BytesIO
 from PIL import Image
 import google.generativeai as genai
-from google.genai import types
+from google.generativeai import types
+
 
 # ========== Streamlit UI ==========
 st.set_page_config(page_title="Horror Image Generator", layout="wide")
@@ -72,3 +73,4 @@ if st.button("Generate Images"):
                     st.error(f"❌ Error generating image {idx}: {e}")
         else:
             st.error("No prompts found.")
+
